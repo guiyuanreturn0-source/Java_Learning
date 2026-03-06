@@ -5,6 +5,7 @@ import com.bro.learning.basics.opp.inheritance.Penguin;
 
 // 多态
 // 多态就是 继承 + 方法重写 + 父类引用指向子类对象 这样的效果是通过父类引用管理不同子类的对象
+// 弊端是多态无法调用子类特有的方法
 
 public class Dog extends Animal {//继承
     String tail;

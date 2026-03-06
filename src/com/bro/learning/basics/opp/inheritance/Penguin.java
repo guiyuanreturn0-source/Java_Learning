@@ -4,11 +4,11 @@ package com.bro.learning.basics.opp.inheritance;
 // 注意 Java是单继承:一个父类可以有多个子类,一个子类只能有一个父类
 
 public class Penguin extends Animal {
-    // Penguin 继承了Animal的属性
+    // Penguin 继承了Animal的属性,包括 private 属性(虽然不能直接用)
     // 还可以添加自己的属性
     String wingType;
 
-    // Penguin 继承了父类的非private方法
+    // Penguin 继承了父类的非private 非static方法
     // 还可以添加自己的方法
     public void makeSound(){
         System.out.println("咕咕嘎嘎!");
@@ -24,10 +24,12 @@ public class Penguin extends Animal {
     }
 
     // 子类的构造方法
+    // 子类不会继承父类的构造方法
+    // 如果不自己写构造方法,Java编译器会隐式生成一个默认空参构造,如下
     public Penguin() {
-        // 子类会默认使用父类的空参构造方法
-        // 如果父类没有无参来构造,子类构造方法必须显式调用 super(参数) 来调用父类的含参构造,否则报错
+        super();// 子类的构造方法第一行默认会先调用父类的空参构造方法(不写也存在),前提是父类必须有显示或者隐式的空参构造
     }
+    // 如果父类没有空参构造 子类必须 super(参数) 显式调用父类的某个有参构造,因为此时Java编译器不会隐式生成空参构造与 super()
 
     public Penguin(String name,int age,String color,String wingType) {
         super(name,age,color);

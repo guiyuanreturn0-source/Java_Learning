@@ -1,7 +1,7 @@
 package com.bro.learning.basics.opp.interface_abstract;
 
 // 抽象类
-// 只定义不实现,和接口很像,但是实现类能实现接口,却只能继承一个抽象类
+// 只定义不实现,和接口很像,但是实现类能实现多个接口,却只能继承一个抽象类
 
 public abstract class Abstract {
     // 属性 和普通类一样
@@ -23,11 +23,12 @@ public abstract class Abstract {
                 System.out.println("呼~ 吸~ 呼~ 吸~");
             }
         };
-        //  子类继承抽象类,必须重写所有抽象方法
+        //  子类继承抽象类,必须重写所有抽象方法,否则也必须加 abstract 变为抽象类
         a.name = "GG bond";
         System.out.println(a.name);
         a.breathe();
     }
 
-
+    // 抽象类可以没有抽象方法,但是有抽象方法的类一定为抽象类
+    // 抽象类不能创建对象
 }
