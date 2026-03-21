@@ -11,5 +11,6 @@ public class Regular {
         String qq_email = "[1-9][0-9a-zA-Z]{4,10}@qq.com$";
         String a1 = "1W0454@qq.com" ;
         System.out.println(a1.matches(qq_email));
+
     }
 }

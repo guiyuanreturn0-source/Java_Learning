@@ -94,12 +94,8 @@ public class Test{
 
     // 集合多态
     List<Animal> animals = new ArrayList<>();
-    animals.add(new
-
-    Dog());
-    animals.add(new
-
-    Cat());
+    animals.add(new Dog());
+    animals.add(new Cat());
 
     // 返回类型多态
     Animal getAnimal(String type) {

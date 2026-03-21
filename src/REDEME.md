@@ -28,10 +28,10 @@
   - 系统_数学_伪随机数( **system_math_random** )
   - 日期( **datetime** )
   - 集合( **collection** )
-    - 泛型( **generrics** )
     - 表( **list** )
-    - 图( **map** )
     - 集( **set** )
+  - 泛型( **generrics** )
+  - 图( **map** )
   - 异常( **exception** )
 
 ---
